@@ -18,8 +18,10 @@ router.get('/', (req, resp) => {
 router.post('/', (req, resp) => {
   let user = new User({
       _id: new mongoose.Types.ObjectId(),
+      externalId : req.body.externalId,
       name: req.body.name,
       calledUser: req.body.calledUser,
+      date: Date.now,
       comment: req.body.comment,
   });
   user.validate(err => {

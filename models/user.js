@@ -4,7 +4,7 @@ const userSchema = mongoose.Schema({
     externalId: String,
     name: String,
     calledUser: String,
-    date: Date,
+    date: Date, 
     comment: String
 });
 
